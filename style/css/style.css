@@ -1,0 +1,48 @@
+body {
+    text-align: right;
+    direction: rtl;
+    font-family: vazir;
+}
+
+.box-shadow {
+    box-shadow: 0rem -5rem 4.25rem 3.05rem;
+}
+
+.fwp {
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    #sidebar {
+        height: calc(100vh - 62px) !important;
+        position: fixed;
+        transition: transform 160ms cubic-bezier(.65, .05, .36, 1);
+        width: 16.8rem;
+    }
+    #sidebar.collapse.show {
+        transform: translate(0, 0);
+    }
+    #sidebar.collapsing {
+        transform: translate(100%, 0);
+    }
+    #sidebar.collapse {
+        transform: translate(100%, 0);
+    }
+}
+
+#sidebar ul li a {
+    color: white;
+}
+
+#sidebar .oi-chevron-left {
+    transform: rotate(-90deg);
+    transition: 200ms;
+}
+
+#sidebar .collapsed .oi-chevron-left {
+    transform: rotate(0deg);
+}
+
+#sidebar.collapsing {
+    height: 0;
+}
